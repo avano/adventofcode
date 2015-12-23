@@ -17,8 +17,8 @@ public class Day1 {
 
 		int result = 0;
 
-		for (int i = 0; i < input.length(); i++) {
-			result += "(".charAt(0) == input.charAt(i) ? 1 : -1;
+		for (char c : input.toCharArray()) {
+			result += '(' == c ? 1 : -1;
 		}
 
 		System.out.println(result);
