@@ -56,6 +56,10 @@ public class Day3 {
 		array.put(new Point(x, y), true);
 	}
 
+	/**
+	 * Counts the total visits.
+	 * @return visits count
+	 */
 	private static int countVisits() {
 		return array.keySet().size();
 	}

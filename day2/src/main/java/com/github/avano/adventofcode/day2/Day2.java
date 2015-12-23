@@ -26,6 +26,13 @@ public class Day2 {
 		System.out.println(result);
 	}
 
+	/**
+	 * Calculates the material needed.
+	 * @param l length
+	 * @param w width
+	 * @param h height
+	 * @return material needed
+	 */
 	private static int calculate(int l, int w, int h) {
 		int result = 0;
 		int dim1, dim2, dim3, smallest;
