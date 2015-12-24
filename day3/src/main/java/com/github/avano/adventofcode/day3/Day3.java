@@ -3,15 +3,15 @@ package com.github.avano.adventofcode.day3;
 import org.apache.commons.io.IOUtils;
 
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Day 3.
  * Created by avano on 23.12.15.
  */
 public class Day3 {
-	private static Map<Point, Boolean> array = new HashMap<>();
+	private static Set<Point> visits = new HashSet<>();
 
 	static int x = 0;
 	static int y = 0;
@@ -23,7 +23,7 @@ public class Day3 {
 		}
 
 		// First row - that's where Santa starts
-		array.put(new Point(0, 0), true);
+		visits.add(new Point(0, 0));
 
 		for (char c : input.toCharArray()) {
 			switch (c) {
@@ -53,7 +53,7 @@ public class Day3 {
 	 * Visits current location.
 	 */
 	private static void visit() {
-		array.put(new Point(x, y), true);
+		visits.add(new Point(x, y));
 	}
 
 	/**
@@ -61,6 +61,6 @@ public class Day3 {
 	 * @return visits count
 	 */
 	private static int countVisits() {
-		return array.keySet().size();
+		return visits.size();
 	}
 }
